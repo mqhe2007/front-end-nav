@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>前端导航</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="font-end-nav">
+        <ul id="list">
+            <li v-for="item in tools"><a :href="'#'+ item.alias">{{item.label}}</a></li>
+        </ul>
+        <template v-for="item in tools">
+            <h2 :id="item.alias">{{item.label}}</h2>
+            <ul class="toolsList">
+                <li v-for="item_ in item.tools" :key="item_.name">
+                    <span class="image" :style="{'background-image': 'url('+ item_.imageUrl +')'}"></span>
+                    <h4><a :href="item_.link" target="_blank">{{item_.name}}</a></h4>
+                    <p>{{item_.discription}}</p>
+                </li>
+            </ul>
+        </template>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

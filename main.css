@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #f5f5f5;
+}
+#font-end-nav {
+  width: 75%;
+  margin: 0 auto;
+}
+#font-end-nav #list {
+  position: fixed;
+  left: 5%;
+  top: 10px;
+  border-radius: 6px;
+  padding: 20px;
+  background: #fff;
+}
+#font-end-nav #list li {
+  list-style: none;
+  font-size: 18px;
+  text-align: center;
+  margin: 5px 0;
+}
+#font-end-nav #list li a {
+  color: #999;
+  text-decoration: none;
+}
+#font-end-nav #list li a:hover {
+  color: #333;
+}
+#font-end-nav .toolsList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+#font-end-nav .toolsList li {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 300px;
+  padding: 20px 30px;
+  margin: 20px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 0 20px -5px #ccc
+}
+#font-end-nav .toolsList li:hover .image {
+  transform: scale3d(1.1, 1.1, 1);
+}
+#font-end-nav .toolsList .image {
+  width: 150px;
+  flex: 0 0 150px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s;
+}
+#font-end-nav .toolsList p {
+  text-align: justify;
+  font-size: 15px;
+  color: #999;
+  margin: 0;
+}
+#font-end-nav .toolsList h4 a {
+  color: #333;
+}
